@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_Sharp_Study", "C_Sharp_Study\C_Sharp_Study.csproj", "{1193C8A8-F92A-44E6-B6EF-8D2B6EED4C6A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Property", "C_Sharp_Study\Property.csproj", "{1193C8A8-F92A-44E6-B6EF-8D2B6EED4C6A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
