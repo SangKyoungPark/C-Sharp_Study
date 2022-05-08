@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Property", "C_Sharp_Study\Property.csproj", "{1193C8A8-F92A-44E6-B6EF-8D2B6EED4C6A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance", "Inheritance\Inheritance.csproj", "{EA3B3AFD-1D8C-4DBF-B318-B068B8A543FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance_상속", "Inheritance\Inheritance_상속.csproj", "{EA3B3AFD-1D8C-4DBF-B318-B068B8A543FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
