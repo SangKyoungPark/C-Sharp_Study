@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassFile", "ClassFile\Clas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodHidden", "MethodHidden\MethodHidden.csproj", "{5AAE3FF7-825D-468B-B7F0-172B8ED92ADA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SealedMethod", "SealedMethod\SealedMethod.csproj", "{871B4B8B-C151-4F4B-B9AE-D1D3D5AE58E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5AAE3FF7-825D-468B-B7F0-172B8ED92ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AAE3FF7-825D-468B-B7F0-172B8ED92ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AAE3FF7-825D-468B-B7F0-172B8ED92ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{871B4B8B-C151-4F4B-B9AE-D1D3D5AE58E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{871B4B8B-C151-4F4B-B9AE-D1D3D5AE58E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{871B4B8B-C151-4F4B-B9AE-D1D3D5AE58E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{871B4B8B-C151-4F4B-B9AE-D1D3D5AE58E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
