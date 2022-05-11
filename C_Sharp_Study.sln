@@ -9,9 +9,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance_상속", "Inher
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassFile", "ClassFile\ClassFile.csproj", "{7ADE7B71-C397-4A33-AB45-4B5F87F78EA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodHidden", "MethodHidden\MethodHidden.csproj", "{5AAE3FF7-825D-468B-B7F0-172B8ED92ADA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodHidden", "MethodHidden\MethodHidden.csproj", "{5AAE3FF7-825D-468B-B7F0-172B8ED92ADA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SealedMethod", "SealedMethod\SealedMethod.csproj", "{871B4B8B-C151-4F4B-B9AE-D1D3D5AE58E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "STD", "STD", "{B184828D-164D-4597-A378-C9C1C6C976D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Text", "Text", "{AEA3CCFC-2B8B-4B59-A01E-3A96A0AA92C5}"
+	ProjectSection(SolutionItems) = preProject
+		목차.txt = 목차.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partial", "Partial\Partial.csproj", "{40C26383-F843-4BC5-AC96-D3388E5AA8DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +48,21 @@ Global
 		{871B4B8B-C151-4F4B-B9AE-D1D3D5AE58E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{871B4B8B-C151-4F4B-B9AE-D1D3D5AE58E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{871B4B8B-C151-4F4B-B9AE-D1D3D5AE58E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40C26383-F843-4BC5-AC96-D3388E5AA8DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C26383-F843-4BC5-AC96-D3388E5AA8DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C26383-F843-4BC5-AC96-D3388E5AA8DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C26383-F843-4BC5-AC96-D3388E5AA8DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1193C8A8-F92A-44E6-B6EF-8D2B6EED4C6A} = {B184828D-164D-4597-A378-C9C1C6C976D6}
+		{EA3B3AFD-1D8C-4DBF-B318-B068B8A543FE} = {B184828D-164D-4597-A378-C9C1C6C976D6}
+		{7ADE7B71-C397-4A33-AB45-4B5F87F78EA4} = {B184828D-164D-4597-A378-C9C1C6C976D6}
+		{5AAE3FF7-825D-468B-B7F0-172B8ED92ADA} = {B184828D-164D-4597-A378-C9C1C6C976D6}
+		{871B4B8B-C151-4F4B-B9AE-D1D3D5AE58E5} = {B184828D-164D-4597-A378-C9C1C6C976D6}
+		{40C26383-F843-4BC5-AC96-D3388E5AA8DC} = {B184828D-164D-4597-A378-C9C1C6C976D6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D55B61F0-853B-4D41-ADB0-E1E3E955F6F4}
