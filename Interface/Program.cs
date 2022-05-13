@@ -59,5 +59,13 @@ class Program
     static void Main(string[] args)
     {
         Player player = new Player();
+        Monster monster = new Monster();
+        //QuestUnit questUnit = new QuestUnit();
+        // 추상클래스나 인터페이스는 객체화가 되지 않음.
+
+        QuestUnit NewQuest = monster;
+
+        //업캐스팅 가능
+        player.Talk(monster);
     }
 }
