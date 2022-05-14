@@ -35,6 +35,22 @@ public static class GTest
     }
 }
 
+// 제네릭 클래스
+class Inven<T>
+{
+    T[] ArrInvenltem;
+
+    public void ItemIn(T _Item)
+    {
+
+    }
+}
+
+class GameITem 
+{
+
+}
+
 class Program
 {
     static void Main(string[] args)
@@ -43,5 +59,7 @@ class Program
         GTest.ConsolePrint("이게 된다고??");
         GTest.ConsolePrint(3.14f);
         GTest.ConsolePrint(3.14f, "미쳤군... 이게 된다고???");
+
+        Inven<GameITem> Item = new Inven<GameITem>;
     }
 }
