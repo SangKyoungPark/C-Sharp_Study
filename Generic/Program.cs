@@ -26,7 +26,13 @@ public static class GTest
         Console.WriteLine(_Value);
         return _Value;
     }
-
+    // 오버로딩까지된다.
+    public static T ConsolePrint<T, U>(T _Value1, U _Value2)
+    {
+        Console.WriteLine(_Value1);
+        Console.WriteLine(_Value2);
+        return _Value1;
+    }
 }
 
 class Program
@@ -36,5 +42,6 @@ class Program
         GTest.ConsolePrint(1000);
         GTest.ConsolePrint("이게 된다고??");
         GTest.ConsolePrint(3.14f);
+        GTest.ConsolePrint(3.14f, "미쳤군... 이게 된다고???");
     }
 }
