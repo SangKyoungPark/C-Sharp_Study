@@ -18,12 +18,18 @@ namespace Tetris
         static void Main(string[] args)
         {
             TScreen NewSC = new TScreen(10, 15);
-            Block NewBlock = new Block();
+            Block NewBlock = new Block(NewSC);
 
-
-            NewSC.Render();
-
-            Console.ReadKey();
+            while (true)
+            {
+                for(int i=0; i<100000000; i++)
+                {
+                    int a = 0;
+                }
+                Console.Clear();
+                NewBlock.Move();
+                NewSC.Render();
+            }
         }
     }
 }

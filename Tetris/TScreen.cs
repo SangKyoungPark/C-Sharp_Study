@@ -13,6 +13,22 @@ class TScreen
         BlockList[_y][_x] = _type;
     }
 
+    public void Clear()
+    {
+        for (int y = 0; y < BlockList.Count; y++)
+        {
+            for (int x = 0; x < BlockList[y].Count; x++)
+            {
+                if (y == 0 || y == BlockList.Count - 1)
+                {
+                    BlockList[y][x] = TBLOCK.WALL;
+                    continue;
+                }
+                BlockList[y][x] = TBLOCK.VOID;
+            }
+        }
+    }
+
     public void Render()
     {
         for (int y = 0; y < BlockList.Count; y++)
