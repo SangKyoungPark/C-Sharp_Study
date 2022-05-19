@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 class TETRISSCREEN
 {
-    List<List<TBLOCK>> BlockList = new List<List<TBLOCK>>();
+    List<List<string>> BlockList = new List<List<string>>();
 
-    public void SetBlock(int _y, int _x, TBLOCK _type)
+    public void SetBlock(int _y, int _x, string _type)
     {
         BlockList[_y][_x] = _type;
     }
@@ -21,10 +22,10 @@ class TETRISSCREEN
             {
                 if (y == 0 || y == BlockList.Count - 1)
                 {
-                    BlockList[y][x] = TBLOCK.WALL;
+                    BlockList[y][x] = "▣";
                     continue;
                 }
-                BlockList[y][x] = TBLOCK.VOID;
+                BlockList[y][x] = "□";
             }
         }
     }
@@ -35,43 +36,30 @@ class TETRISSCREEN
         {
             for (int x = 0; x < BlockList[y].Count; x++)
             {
-                switch (BlockList[y][x])
-                {
-                    case TBLOCK.WALL:
-                        Console.Write("▣");
-                        break;
-                    case TBLOCK.VOID:
-                        Console.Write("□");
-                        break;
-                    case TBLOCK.BLOCK:
-                        Console.Write("■");
-                        break;
-                    default:
-                        break;
-                }
+                Console.Write(BlockList[y][x]);
             }
             Console.WriteLine("");
         }
     }
 
-    public TETRISSCREEN(int _x, int _y)
+    public TETRISSCREEN(int _y, int _x)
     {
 
         for (int y = 0; y < _y; y++)
         {
-            BlockList.Add(new List<TBLOCK>());
+            BlockList.Add(new List<string>());
             for (int x = 0; x < _x; x++)
             {
-                BlockList[y].Add(TBLOCK.VOID);
+                BlockList[y].Add("□");
             }
         }
         for (int i = 0; i < BlockList[0].Count; i++)
         {
-            BlockList[0][i] = TBLOCK.WALL;
+            BlockList[0][i] = "▣";
         }
         for (int i = 0; i < BlockList[BlockList.Count - 1].Count; i++)
         {
-            BlockList[BlockList.Count - 1][i] = TBLOCK.WALL;
+            BlockList[BlockList.Count - 1][i] = "▣";
         }
     }
 }

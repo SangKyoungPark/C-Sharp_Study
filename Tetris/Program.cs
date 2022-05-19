@@ -4,13 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-enum TBLOCK
-{
-    WALL,
-    VOID,
-    BLOCK,
-}
-
 namespace Tetris
 {
     class Program

@@ -21,16 +21,27 @@ class Block
 {
     int X = 0;
     int Y = 0;
-    TBLOCK BlockType = TBLOCK.BLOCK;
+    string BlockType = "■";
+    List<List<string>> BlockData = new List<List<string>>();
 
     TETRISSCREEN Screen = null;
     
     public Block(TETRISSCREEN _SCreen)
     {
         Screen = _SCreen;
+
+        for (int y = 0; y < 4; y++)
+        {
+            BlockData.Add(new List<string>());
+            for (int x = 0; x < 4; x++)
+            {
+                BlockData[y].Add("□");
+            }
+
+        }
     }
 
-    private void input()
+    private void Input()
     {
         if (false == Console.KeyAvailable)
         {
@@ -40,13 +51,13 @@ class Block
         switch (Console.ReadKey().Key)
         {
             case ConsoleKey.A:
-                Y -= 1;
+                X -= 1;
                 break;
             case ConsoleKey.D:
-                Y += 1;
+                X += 1;
                 break;
             case ConsoleKey.S:
-                X += 1;
+                Y += 1;
                 break;
             default:
                 break;
@@ -58,9 +69,9 @@ class Block
         // 내가 어떤 키든 눌렀을 때만 실행
         if (Console.KeyAvailable)
         {
-            input();
+            Input();
         }
-        Screen.SetBlock(X, Y, BlockType);
+        Screen.SetBlock(Y, X, "■");
     }
 }
 
