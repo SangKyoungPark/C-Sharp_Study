@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-class TScreen
+class TETRISSCREEN
 {
     List<List<TBLOCK>> BlockList = new List<List<TBLOCK>>();
 
@@ -54,7 +54,7 @@ class TScreen
         }
     }
 
-    public TScreen(int _x, int _y)
+    public TETRISSCREEN(int _x, int _y)
     {
 
         for (int y = 0; y < _y; y++)

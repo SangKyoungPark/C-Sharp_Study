@@ -23,30 +23,30 @@ class Block
     int Y = 0;
     TBLOCK BlockType = TBLOCK.BLOCK;
 
-    TScreen Screen = null;
+    TETRISSCREEN Screen = null;
     
-    public Block(TScreen _SCreen)
+    public Block(TETRISSCREEN _SCreen)
     {
         Screen = _SCreen;
     }
 
     private void input()
     {
-        if (!Console.KeyAvailable)
+        if (false == Console.KeyAvailable)
         {
             return;
         }
-        // 키를 눌렀다. Console.ReadKey()가 리턴된다.
+
         switch (Console.ReadKey().Key)
         {
             case ConsoleKey.A:
-                X -= 1;
+                Y -= 1;
                 break;
             case ConsoleKey.D:
-                X += 1;
+                Y += 1;
                 break;
             case ConsoleKey.S:
-                Y += 1;
+                X += 1;
                 break;
             default:
                 break;
