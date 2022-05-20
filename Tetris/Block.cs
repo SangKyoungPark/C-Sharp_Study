@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 // 위에서부터 블럭이 떨어지는 것을 만들고 싶다.
 
+enum BLOCKDIR
+{
+    BD_T,
+    BD_R,
+    BD_B,
+    BD_L,
+    BD_MAX,
+}
+
 enum BLOCKTYPE
 {
     BT_I,
@@ -15,30 +24,28 @@ enum BLOCKTYPE
     BT_S,
     BT_T,
     BT_O,
+    BT_MAX,
 }
 
-class Block
+partial class Block
 {
     int X = 0;
     int Y = 0;
-    string BlockType = "■";
-    List<List<string>> BlockData = new List<List<string>>();
+    string[][] Arr = null;
+    //List<List<string>> BlockData = new List<List<string>>();
 
     TETRISSCREEN Screen = null;
     
     public Block(TETRISSCREEN _SCreen)
     {
         Screen = _SCreen;
+        DataInit();
+        SettingBlock(BLOCKTYPE.BT_T, BLOCKDIR.BD_L);
+    }
 
-        for (int y = 0; y < 4; y++)
-        {
-            BlockData.Add(new List<string>());
-            for (int x = 0; x < 4; x++)
-            {
-                BlockData[y].Add("□");
-            }
-
-        }
+    private void SettingBlock(BLOCKTYPE _Type, BLOCKDIR _Dir)
+    {
+        Arr = AllBlock[(int)_Type][(int)_Dir];
     }
 
     private void Input()
@@ -66,12 +73,19 @@ class Block
 
     public void Move()
     {
-        // 내가 어떤 키든 눌렀을 때만 실행
-        if (Console.KeyAvailable)
+        Input();
+
+        for (int y = 0; y < 4; y++)
         {
-            Input();
+            for (int x = 0; x < 4; x++)
+            {
+                if (Arr[y][x] == "□")
+                {
+                    continue;
+                }
+                Screen.SetBlock(Y+y, X+x, Arr[y][x]);
+            }
         }
-        Screen.SetBlock(Y, X, "■");
     }
 }
 

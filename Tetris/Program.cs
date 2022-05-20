@@ -15,13 +15,14 @@ namespace Tetris
 
             while (true)
             {
-                for(int i=0; i<100000000; i++)
+                for(int i=0; i<300000000; i++)
                 {
                     int a = 0;
                 }
                 Console.Clear();
-                NewBlock.Move();
                 NewSC.Render();
+                NewSC.Clear();
+                NewBlock.Move();
             }
         }
     }
