@@ -34,13 +34,24 @@ partial class Block
     string[][] Arr = null;
     //List<List<string>> BlockData = new List<List<string>>();
 
+    BLOCKTYPE CurBlockType = BLOCKTYPE.BT_T;
+    BLOCKDIR CurDirType = BLOCKDIR.BD_T;
+
     TETRISSCREEN Screen = null;
-    
+    Random NewRandom = new Random();
+
     public Block(TETRISSCREEN _SCreen)
     {
         Screen = _SCreen;
         DataInit();
-        SettingBlock(BLOCKTYPE.BT_T, BLOCKDIR.BD_L);
+        RandomBlockType();
+        SettingBlock(CurBlockType, CurDirType);
+    }
+
+    public void RandomBlockType()
+    {
+        int RandomIndex = NewRandom.Next((int)BLOCKTYPE.BT_I, (int)BLOCKTYPE.BT_MAX);
+        CurBlockType = (BLOCKTYPE)RandomIndex;
     }
 
     private void SettingBlock(BLOCKTYPE _Type, BLOCKDIR _Dir)
@@ -50,6 +61,8 @@ partial class Block
 
     private void Input()
     {
+        Y += 1;
+
         if (false == Console.KeyAvailable)
         {
             return;
@@ -59,6 +72,25 @@ partial class Block
         {
             case ConsoleKey.A:
                 X -= 1;
+                break;
+            case ConsoleKey.Q:
+                // 왼쪽으로 돌리기
+                --CurDirType;
+                if(CurDirType < 0)
+                {
+                    CurDirType = BLOCKDIR.BD_L;
+                }
+
+                SettingBlock(CurBlockType, CurDirType);
+                break;
+            case ConsoleKey.E:
+                // 오른쪽으로 돌리기
+                ++CurDirType;
+                if (CurDirType == BLOCKDIR.BD_MAX)
+                {
+                    CurDirType = BLOCKDIR.BD_T;
+                }
+                SettingBlock(CurBlockType, CurDirType);
                 break;
             case ConsoleKey.D:
                 X += 1;

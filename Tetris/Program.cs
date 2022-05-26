@@ -15,7 +15,7 @@ namespace Tetris
 
             while (true)
             {
-                for(int i=0; i<300000000; i++)
+                for(int i=0; i<400000000; i++)
                 {
                     int a = 0;
                 }
